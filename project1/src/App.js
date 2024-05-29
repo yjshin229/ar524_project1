@@ -1,10 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import styled, { createGlobalStyle } from "styled-components";
+import "./App.css";
+import CharlesWright from "./assets/fonts/CharlesWright.ttf";
+
+const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "CharlesWright" ;
+    src: url(${CharlesWright}) format('truetype');
+
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <StyledAppContainer>
+      <GlobalStyle />
+      <header>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,8 +29,14 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </StyledAppContainer>
   );
 }
+
+const StyledAppContainer = styled.div`
+  background-color: #6b6b6b;
+  height: 100vh;
+  font-family: "CharlesWright";
+`;
 
 export default App;
