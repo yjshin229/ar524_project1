@@ -1,13 +1,13 @@
 import logo from "./logo.svg";
 import styled, { createGlobalStyle } from "styled-components";
-import "./App.css";
 import CharlesWright from "./assets/fonts/CharlesWright.ttf";
+import { Route, Routes } from "react-router-dom";
+import { InfoGraphicsScreen, TitleScreen } from "./screens";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "CharlesWright" ;
     src: url(${CharlesWright}) format('truetype');
-
   }
 `;
 
@@ -15,28 +15,19 @@ function App() {
   return (
     <StyledAppContainer>
       <GlobalStyle />
-      <header>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<TitleScreen />} />
+        <Route path="/info-graphic" element={<InfoGraphicsScreen />} />
+      </Routes>
     </StyledAppContainer>
   );
 }
 
 const StyledAppContainer = styled.div`
-  background-color: #6b6b6b;
+  background-color: black;
   height: 100vh;
   font-family: "CharlesWright";
+  display: flex;
 `;
 
 export default App;
