@@ -6,7 +6,7 @@ const TitleScreen = () => {
   return (
     <StyledTitleContainer>
       <StyledTitle>
-        CALIFORNIA PERSONALIZED LICENSE PLATE APPLICATIONS{" "}
+        Rejected: California's Controversial License Plate Applications
       </StyledTitle>
       <StyledNavigation>
         <StyledP to={"/info-graphic"}>{`Go See Data ->`}</StyledP>
@@ -26,6 +26,7 @@ const StyledTitleContainer = styled.div`
 const StyledTitle = styled.h1`
   color: white;
   text-align: center;
+  text-transform: uppercase;
 `;
 
 const StyledNavigation = styled.div`
