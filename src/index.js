@@ -4,12 +4,19 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
+const basename = "/ar524_project1";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/*",
+      element: <App />,
+    },
+  ],
   {
-    path: "ar524_project1/*",
-    element: <App />,
-  },
-]);
+    basename: basename,
+  }
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
