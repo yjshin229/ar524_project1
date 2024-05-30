@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/*",
+    path: "ar524_project1/*",
     element: <App />,
   },
 ]);
