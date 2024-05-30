@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import styled, { createGlobalStyle } from "styled-components";
 import CharlesWright from "./assets/fonts/CharlesWright.ttf";
 import { Route, Routes } from "react-router-dom";
